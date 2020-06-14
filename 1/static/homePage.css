@@ -1,0 +1,76 @@
+body {
+    background-image: url('books.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+
+}
+
+h1 {
+    color: whitesmoke;
+    font-family: fantasy;
+    font-size: 100px;
+}
+
+h2 {
+    padding-left: 200px;
+    color: whitesmoke;
+    font-family: fantasy;
+}
+
+#about {
+    font-family: fantasy;
+    color: whitesmoke;
+    font-size: 60px;
+    margin-top: 100px;
+    display: flexbox;
+}
+
+.left {
+    margin-top: 400px;
+}
+
+#alignButton {
+    margin-right: 100px;
+    margin-top: 50px;
+}
+
+#button1, #button2 {
+    width: 150px;
+    height: 45px;
+}
+
+a {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+h5 {
+    color: whitesmoke;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.btn-primary, .btn-primary:hover, .btn-primary:visited {
+    background-color: #795c34 !important;
+    border-color: #795c34 !important;
+}
+
+.btn-primary:active {
+    background-color: whitesmoke !important;
+}
+
+.card {
+    background-color: white;
+    padding: 20px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    border-radius: 7px;
+    box-shadow:  0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#BandT {
+    margin-top: 30px;
+}
+
+.button3 {
+    width: 60px;
+}

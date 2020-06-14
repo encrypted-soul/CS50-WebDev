@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="{{ url_for('static',filename='homePage.css') }}">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Homepage</title>
+</head>
+
+
+<body>
+    <div class="container">
+        <div class="row" id="welcome">
+            <div class="col-md-7 col-sm-12">
+                <div class="left">
+                    <h1>Turning Pages</h1>
+                    <h2>Now and for years to come</h2>
+                    <div class="d-flex justify-content-around" id="alignButton">
+                        <a href="{{ url_for('signUp') }}" class="btn btn-primary btn-lg active" role="button"
+                            aria-pressed="true" id="button1">Sign Up</a>
+                        <a href="{{ url_for('login') }}" class="btn btn-primary btn-lg active" role="button" aria-pressed="false"
+                            id="button2">Log In</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-5 col-sm-0">
+                <div class="d-flex justify-content-center">
+                    <h1 id="about">About</h1>
+                </div>
+                <h5><i>“One glance at a book and you hear the voice of another person, perhaps someone dead for 1,000
+                        years. To read is to voyage through time”, said Carl Sagan.</i><br>
+                    Wanna share how big a fan you are of Harry Potter? Or how bewildered you were when you discovered
+                    the murderer in Christie's crime? Then you have landed at a perfect place. Hit that SignUp button,
+                    let us know you better
+                    and scribble down your thoughts.<br>
+                    <br> And if you are already one of us, you know its fun :P</h5>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
