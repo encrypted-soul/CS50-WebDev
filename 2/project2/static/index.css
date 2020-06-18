@@ -1,0 +1,46 @@
+.card {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 150px;
+    margin-top: 60px;
+    border-radius: 7px;
+    box-shadow:  0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: inline-block;
+    width: 400px;
+}
+
+body {
+    background-image: url('pattern.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.container {
+    background-image: url('pattern2.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.btn-primary, .btn-primary:hover, .btn-primary:visited {
+    background-color: #DC143C !important;
+    border-color: #DC143C !important;
+}
+
+h1 {
+    font-size: 100px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-top: 50px;
+    padding-top: 30px;
+    color: white;
+}
+
+#foot {
+    background-color: #151e3d;
+    height: 63px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}

@@ -1,0 +1,54 @@
+{% extends "layout.html" %}
+
+{% block head %}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<link rel="stylesheet" href="{{ url_for('static',filename='index.css') }}">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+{% endblock %}
+{% block title %}
+<title>Flack</title>
+{% endblock %}
+
+{% block body %}
+<div class="container" style="margin-top: 100px;">
+    <div class="column" style="text-align: center;">
+        <h1>
+            <large>Flack</large>
+        </h1>
+        <div class="d-flex justify-content-center">
+            <div class="card">
+                <div class="col-md-12">
+                    <form action="{{ url_for('enterStatus') }}" method="post">
+                        <div class="form-group">
+                            <label>Welcome to Flack! <br><br>Choose a username to chat with people around the
+                                world!</label><br>
+                            <input type="name" class="form-control" name="name">
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-primary">Enter</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div style="margin-top: 148px;">
+    <footer align='center' 0px;"  id="foot">
+        <div>
+            <div class="footer-content">
+                <p style="color: white;"><i class="fa fa-copyright" aria-hidden="true"></i> 2020 Gagan Aryan</p>
+                <p style="color: white;">Designed with <i class="fa fa-heart" aria-hidden="true" style="color: red;"></i> by <a href="#"
+                        style="color: brown;">Gagan Aryan</a></p>
+            </div>
+        </div>
+    </footer>
+</div>
+{% endblock %}
+
+</html>

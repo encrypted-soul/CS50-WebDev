@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block head %}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<link rel="stylesheet" href="{{ url_for('static',filename='chat.css') }}">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+{% endblock %}
+{% block title %}
+<title>Flask Chat</title>
+{% endblock %}
+
+{% block body %}
+<nav class="shadow -sm navbar navbar-light" style="background-color: #151e3d; height: 63px;">
+    <a class=" navbar-brand" href="file:///home/gaganaryan/Desktop/cs50/project0/index.html" style='color: white; font-family: fantasy; font-size: 30px;'>
+        Flack
+    </a>
+    <ul class="nav justify-content-end">
+        <li class="nav-item">
+            <a class="nav-link" href="file:///home/gaganaryan/Desktop/cs50/project0/index.html" style='color: white; font-family: fantasy; font-size: 20px;'>Change Name</a>
+        </li>
+</nav>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-3">
+            <h4>Hello {{ name }}</h4>
+        </div>
+        <div class="col-md-9">
+        </div>
+    </div>
+</div>
+<footer align='center' 0px;"  id="foot">
+    <div>
+        <div class="footer-content">
+            <p style="color: white;"><i class="fa fa-copyright" aria-hidden="true"></i> 2020 Gagan Aryan</p>
+            <p style="color: white;">Designed with <i class="fa fa-heart" aria-hidden="true" style="color: red;"></i> by <a href="#"
+                    style="color: brown;">Gagan Aryan</a></p>
+        </div>
+    </div>
+</footer>
+{% endblock %}

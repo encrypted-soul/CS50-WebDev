@@ -1,0 +1,29 @@
+.col-md-3 {
+    background-image: url('pattern2.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    padding-left: 30px;
+}
+
+.col-md-9 {
+    background-image: url('pattern.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+#foot {
+    background-color: #151e3d;
+    height: 63px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+h4 {
+    color: white;
+    margin-top: 30px;
+    font-family: fantasy;
+}
