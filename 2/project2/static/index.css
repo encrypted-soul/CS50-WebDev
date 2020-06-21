@@ -23,9 +23,14 @@ body {
     background-size: cover;
 }
 
-.btn-primary, .btn-primary:hover, .btn-primary:visited {
+.btn-primary, .btn-primary:visited {
     background-color: #DC143C !important;
     border-color: #DC143C !important;
+}
+
+.btn-primary:hover {
+    background-color: #fa8072 !important;
+    border-color: #fa8072 !important;
 }
 
 h1 {

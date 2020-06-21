@@ -9,37 +9,60 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<script src="chat.js"></script>
 {% endblock %}
 {% block title %}
-<title>Flask Chat</title>
+<title>Flack Chat</title>
 {% endblock %}
 
 {% block body %}
 <nav class="shadow -sm navbar navbar-light" style="background-color: #151e3d; height: 63px;">
-    <a class=" navbar-brand" href="file:///home/gaganaryan/Desktop/cs50/project0/index.html" style='color: white; font-family: fantasy; font-size: 30px;'>
+    <a class=" navbar-brand" href="#" style='color: white; font-family: fantasy; font-size: 30px;'>
         Flack
     </a>
     <ul class="nav justify-content-end">
         <li class="nav-item">
-            <a class="nav-link" href="file:///home/gaganaryan/Desktop/cs50/project0/index.html" style='color: white; font-family: fantasy; font-size: 20px;'>Change Name</a>
+            <a class="nav-link" href="{{ url_for('changeName') }}"
+                style='color: white; font-family: fantasy; font-size: 20px;'>Change Name</a>
         </li>
 </nav>
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-3">
             <h4>Hello {{ name }}</h4>
+            <form action="{{ url_for('create_channel_status') }}" method="post">
+                <div class="form-group">
+                    <label style="color: white; font-family: fantasy;">Enter the channel name you want to
+                        create</label><br>
+                    <input type="name" class="form-control" name="channel_name" style="width: 50%;">
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-primary" type="submit">Create Channel</button>
+                </div>
+            </form>
+            <h4>Channels</h4>
+            {% if chatrooms %}
+            {% for chatroom in chatrooms %}
+            <span id="column_list">
+                <a href="#"># {{ chatroom }}<br></a>
+            </span>
+            {% endfor %}
+            {% endif %}
         </div>
         <div class="col-md-9">
+            <p>is it working</p>
         </div>
     </div>
 </div>
-<footer align='center' 0px;"  id="foot">
+<footer align='center' 0px;" id="foot">
     <div>
         <div class="footer-content">
             <p style="color: white;"><i class="fa fa-copyright" aria-hidden="true"></i> 2020 Gagan Aryan</p>
-            <p style="color: white;">Designed with <i class="fa fa-heart" aria-hidden="true" style="color: red;"></i> by <a href="#"
-                    style="color: brown;">Gagan Aryan</a></p>
+            <p style="color: white;">Designed with <i class="fa fa-heart" aria-hidden="true" style="color: red;"></i> by
+                <a href="#" style="color: brown;">Gagan Aryan</a></p>
         </div>
     </div>
 </footer>
+
+
 {% endblock %}

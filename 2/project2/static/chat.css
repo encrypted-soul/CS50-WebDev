@@ -1,3 +1,8 @@
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
 .col-md-3 {
     background-image: url('pattern2.jpg');
     background-repeat: no-repeat;
@@ -26,4 +31,37 @@ h4 {
     color: white;
     margin-top: 30px;
     font-family: fantasy;
+    margin-bottom: 30px;
+}
+
+.btn-primary, .btn-primary:visited {
+    background-color: #DC143C !important;
+    border-color: #DC143C !important;
+    width: 95%;
+    margin-bottom: 30px;
+}
+
+.btn-primary:hover {
+    background-color: #fa8072 !important;
+    border-color: #fa8072 !important;
+}
+
+#column_list:hover {
+    background-color: #151e3d;
+}
+
+.col-md-9 {
+    display: flex;
+    align-items: flex-end;
+}
+
+#column_list > a {
+    text-decoration: solid;
+    color: white; 
+    font-family: monospace;
+}
+
+.row {
+    display: flex;
+    height: 100%;
 }
