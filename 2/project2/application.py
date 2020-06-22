@@ -15,7 +15,7 @@ socketio = SocketIO(app)
 
 usernames = []
 chatrooms = ['random', 'general']
-chats = []
+chats = {}
 
 @app.route("/")
 def index():
@@ -45,6 +45,21 @@ def changeName():
 
 @app.route("/create_channel_status", methods=["POST", "GET"])
 def create_channel_status():
-    channel_name = request.form.get("channel_name")
-    chatrooms.append(channel_name)
-    return render_template("chat.html", name=session["username"], chatrooms=chatrooms)
+    if request.method == "POST":
+        channel_name = request.form.get("channel_name")
+        print(channel_name)
+        if channel_name in chatrooms:
+            return "channel name already exists"
+        else:
+            chatrooms.append(channel_name)
+            chats[channel_name] = []
+            session["channel_name"] = channel_name
+            return render_template("chat.html", name=session["username"], chatrooms=chatrooms)
+
+    elif request.method == "GET":
+        session["channel_name"] = channel_name
+        return render_template("chat.html", name=session["username"])
+
+@socketio.on("submit channel")
+def submit_channel(data):
+    emit("cast channel", {"selection": data["selection"]}, broadcast=True)

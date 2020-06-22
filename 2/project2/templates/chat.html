@@ -34,20 +34,22 @@
                 <div class="form-group">
                     <label style="color: white; font-family: fantasy;">Enter the channel name you want to
                         create</label><br>
-                    <input type="name" class="form-control" name="channel_name" style="width: 50%;">
+                    <input type="name" id="channel_input" class="form-control" name="channel_name" style="width: 50%;">
                 </div>
                 <div class="form-group">
-                    <button class="btn btn-primary" type="submit">Create Channel</button>
+                    <button class="btn btn-primary" id="channel_button" type="submit">Create Channel</button>
                 </div>
             </form>
             <h4>Channels</h4>
-            {% if chatrooms %}
-            {% for chatroom in chatrooms %}
-            <span id="column_list">
-                <a href="#"># {{ chatroom }}<br></a>
-            </span>
-            {% endfor %}
-            {% endif %}
+            <div id="list">
+                {% if chatrooms %}
+                {% for chatroom in chatrooms %}
+                <span id="column_list">
+                    <a href="#"># {{ chatroom }}<br></a>
+                </span>
+                {% endfor %}
+                {% endif %}
+            </div>
         </div>
         <div class="col-md-9">
             <p>is it working</p>
@@ -58,11 +60,13 @@
     <div>
         <div class="footer-content">
             <p style="color: white;"><i class="fa fa-copyright" aria-hidden="true"></i> 2020 Gagan Aryan</p>
-            <p style="color: white;">Designed with <i class="fa fa-heart" aria-hidden="true" style="color: red;"></i> by
+            <p style="color: white;">Built with <i class="fa fa-heart" aria-hidden="true" style="color: red;"></i> by
                 <a href="#" style="color: brown;">Gagan Aryan</a></p>
         </div>
     </div>
 </footer>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.js"
+    integrity="sha256-ji09tECORKvr8xB9iCl8DJ8iNMLriDchC1+p+yt1hSs=" crossorigin="anonymous"></script>
+<script src="{{ url_for('static', filename='chatroom.js') }}"></script>
 
 {% endblock %}
