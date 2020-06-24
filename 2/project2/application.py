@@ -15,7 +15,7 @@ socketio = SocketIO(app)
 
 usernames = []
 chatrooms = ['random', 'general']
-chats = {}
+chats = {'random' : ['this is message on1']}
 
 @app.route("/")
 def index():

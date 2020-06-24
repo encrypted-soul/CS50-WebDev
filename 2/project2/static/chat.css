@@ -1,6 +1,5 @@
-html, body {
-    height: 100%;
-    width: 100%;
+html, body, .container-fluid, .row {
+    height: 95.5%;
 }
 
 .col-md-3 {
@@ -37,13 +36,16 @@ h4 {
 .btn-primary, .btn-primary:visited {
     background-color: #DC143C !important;
     border-color: #DC143C !important;
-    width: 95%;
-    margin-bottom: 30px;
 }
 
 .btn-primary:hover {
     background-color: #fa8072 !important;
     border-color: #fa8072 !important;
+}
+
+#channel_button {
+    width: 95%;
+    margin-bottom: 30px;
 }
 
 #column_list:hover {
@@ -64,4 +66,14 @@ h4 {
 .row {
     display: flex;
     height: 100%;
+}
+
+#message_input {
+    width: 95%;
+    margin-bottom: 10px;
+}
+
+#send_button {
+    width: 5%;
+    margin-bottom: 10px;
 }
